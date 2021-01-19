@@ -1,0 +1,341 @@
+:root {
+  /*colores*/
+--while:#eaeded;
+--negro:#232f33;
+--naranja:#e47911;
+--red:#ff2e63;
+--black:#252a34;
+--blue:#08d9d6;
+--rojobonito:#EE2469;
+--verderclaro:#d4edda;
+--verdeclarooscu: #c3e6cb;
+--rojoperfecto:#ff696e;
+
+
+--borderradius:16px;
+--box-shadow: 0 2px 3px var(--naranja);
+--font-family: 'Roboto', sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family);
+
+}
+body{
+	display: flex;
+}
+
+#desing{
+	width: 100%;
+}
+#father-aside{
+	background-color: black;
+	z-index: 20;
+}
+#aside{
+	width: 320px;
+	height: 100vh;
+	background-color: black;
+	position: fixed;
+	transition: 1s;
+	left: -100%;
+	z-index: 2000;
+}
+
+#aside .close{
+	position: absolute;
+	color:white;
+	cursor: pointer;
+	font-size: 18px;
+	left: 20px;
+	top: 20px;
+	padding: 4px;
+	border-radius: 50%;
+}
+#aside .close:hover{
+	color:var(--rojoperfecto);
+}
+
+#aside .contenedor-img{
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	height: 300px;
+}
+
+#aside .contenedor-img img{
+	cursor: pointer;
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	transform: translate(0px,60px);
+}
+#aside .contenedor-items{
+	height: 400px;
+	text-align: center;
+	width: 100;
+	position: relative;
+	border-top: 5px solid black
+}
+#aside .contenedor-items > ul{
+	margin-top: 20px;
+	position: relative;
+}
+#aside .contenedor-items > ul  li{
+	list-style: none;
+	position: relative;
+
+}
+#aside .contenedor-items > ul  li > a{
+	text-decoration: none;
+	color: var(--while);
+	font-size: 16px;
+
+}
+#aside .contenedor-items > ul  li > a:hover{
+	color: var(--naranja)
+}
+#aside .contenedor-items > ul  li > a i{
+	padding-left: 200px;
+}
+#aside .contenedor-items div{
+	text-align: justify;
+	right: 50%;
+	display: none;	
+	transition : '1s';
+}
+#aside .contenedor-items div  > .item{
+	text-decoration: none;
+	color: var(--while);
+	transform: translate(35%);
+	padding: 5px
+}
+#aside .contenedor-items div  > .item:hover{
+	color: var(--naranja)
+}
+
+/*navegacion*/
+#navegation{
+	display: flex;
+	flex-direction: row;	
+	padding: 12px;
+	background-color: white;
+	box-shadow: 0 0 60px rgba(0,0,0,.12);
+}
+.navbar{
+	padding: 5px;
+	color: var(--negro);
+	font-size: 17px;
+	width: 50%;
+}
+.contenedor-nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 50%;
+}
+.contenedor-nav h1{
+	color: var(--negro);
+	font-size: 22px;
+}
+.contenedor-nav h1 b{
+	color: var(--rojoperfecto);
+}
+
+.navbar .fa-bars{
+	cursor: pointer;
+	display: flex;
+	color: coral;
+}
+
+/*header start*/
+#header{
+	height: 571px;
+	width: 100%;
+	text-align: center;
+	background: url("./src/img/paisaje.jpg");
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 6px 15px rgba(36, 37, 38, 0.15);
+	position: relative;
+	margin-bottom: 10px;
+}
+#header .sombreado{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.10); 
+	position: absolute;
+	z-index: 10;
+	top: 0;
+}
+#header h2{
+position: absolute;
+z-index: 15;
+color: floralwhite;
+
+font-size: 45px;
+font: 700 38px Open Sans,sans-serif;
+top: 70px;
+left: 52%;
+transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width: 390px){
+	#header h2{
+		font-size: 35px
+	}
+}	
+
+#buscador{
+	height: 200px;
+	transform: translate(0,100%);
+	position: relative;
+	z-index: 10;
+}
+
+#header div input{
+position: relative;
+z-index: 15;
+border: none;
+width: 500px;
+height: 50px;
+z-index: 15;
+border: 1px solid #eaeded;
+font: normal 22px Open Sans,sans-serif;
+color: var(--blue);
+box-shadow: 0 6px 15px rgba(36, 37, 38, 0.15);
+}
+
+@media screen and (max-width: 952px){
+	#header div input{
+		width: 320px;
+	}
+}	
+@media screen and (max-width: 694px){
+	#header div input{
+		left: -5px;
+	}
+	#header div button{
+		left: 50%;
+		top:80px;
+		transform: translate(-50%,-50%);
+	}
+}	
+
+#header div button{
+position: absolute;
+z-index: 15;
+background-color: white;
+height: 25%;
+border: none;
+width: 60px;
+font: 700 13px Open Sans,sans-serif;
+cursor: pointer;
+color: coral;
+}
+
+
+/*diseño de las cards*/
+main{
+	width: 100%;
+}
+
+.pintarCards div{
+background-color: blue;
+}
+
+.cards{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center; 
+}
+.cards .card{
+	width: 350px;
+	height: 240px;
+	margin: 5px;
+	
+	box-shadow: 0 6px 15px rgba(36, 37, 38, 0.15);
+	position: relative;
+	z-index: 5;
+	background-color: transparent;
+}
+.cards .card img{
+	width: 350px;
+	height: 240px;
+	
+	cursor: pointer;
+	position: relative;
+	z-index: 5;
+	object-fit: contain;
+	object-position: unset;
+}
+
+.cards .card .sombra{
+	width: 350px;
+	height: 240px;
+	background-color: rgba(0,0,0,.30); 
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	visibility:hidden; 
+}
+
+.cards .card .sombra button{
+border: none;
+float: right;
+margin: 5px 5px 0px 0px;
+color: var(--naranja);
+padding: 5px;
+border-radius: 15px;
+background-color: antiquewhite;
+font: 600 13px Open Sans,sans-serif;
+}
+.cards .card .sombra a{
+position: absolute;
+top: 80%;
+text-decoration: none;
+color: bisque;
+font-weight: bold;
+padding: 5px;
+border-radius: 16px;
+border:1px solid antiquewhite;
+}
+.cards .card:hover .sombra{
+	transition: 1s;
+	visibility:visible; 	
+}
+.retroceso{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.retroceso #atras{
+background-color: white;
+border: none;
+font: 700 17px Open Sans,sans-serif;
+cursor: pointer;
+color: coral;
+border: 1px solid coral;
+border-radius:16px;
+padding: 5px;
+margin: 5px;
+}
+.retroceso #siguiente{
+background-color: white;
+border: none;
+font: 700 17px Open Sans,sans-serif;
+cursor: pointer;
+color: coral;
+border: 1px solid coral;
+border-radius:16px;
+padding: 5px;
+margin: 5px;
+}
+.retroceso #atras:hover,#siguiente:hover{
+	color: var(--black)
+}
